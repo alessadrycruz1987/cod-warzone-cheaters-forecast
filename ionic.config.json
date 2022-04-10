@@ -1,0 +1,7 @@
+{
+  "name": "cod-warzone-cheaters-forecast",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
