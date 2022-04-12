@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
+<ion-header mode="ios" [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Today's Cheaters Forecast
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-refresher slot="fixed" (ionRefresh)="onRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <!-- <img src="../../assets/img/img-1.jpeg" /> -->
+
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Playability: {{ playability }}</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">{{ forecast }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label slot="start">Cheater's Index:</ion-label>
+        <ion-label slot="end">{{ cheaters_index }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
