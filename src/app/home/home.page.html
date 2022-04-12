@@ -1,7 +1,7 @@
 <ion-header mode="ios" [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Today's Cheaters Forecast
+      {{ game_title }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,14 +15,15 @@
     <!-- <img src="../../assets/img/img-1.jpeg" /> -->
 
     <ion-card-header>
-      <ion-card-title class="ion-text-center">Playability: {{ playability }}</ion-card-title>
-      <ion-card-subtitle class="ion-text-center">{{ forecast }}</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">{{ forecast_title }}</ion-card-title>
+      <ion-card-title class="ion-text-center">{{ playability_title }} {{ playability_value }}</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">{{ forecast_message }}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
       <ion-item lines="none">
-        <ion-label slot="start">Cheater's Index:</ion-label>
-        <ion-label slot="end">{{ cheaters_index }}</ion-label>
+        <ion-label slot="start">{{ cheaters_index_title }}</ion-label>
+        <ion-label slot="end">{{ cheaters_index_value }}</ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>

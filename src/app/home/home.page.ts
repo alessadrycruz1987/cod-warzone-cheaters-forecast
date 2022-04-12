@@ -8,9 +8,13 @@ import { CodWarzoneCheatersForecastJsonService } from '../services/get/cod-warzo
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  public forecast: string;
-  public playability: string;
-  public cheaters_index: string;
+  public game_title: string;
+  public forecast_title: string;
+  public forecast_message: string;
+  public playability_title: string;
+  public playability_value: string;
+  public cheaters_index_title: string;
+  public cheaters_index_value: string;
 
   constructor(private codWarzoneCheatersForecastJsonService: CodWarzoneCheatersForecastJsonService) { }
 
@@ -30,9 +34,13 @@ export class HomePage {
     await this.codWarzoneCheatersForecastJsonService.getCodWarzoneCheatersForecast().toPromise().then(data => {
       console.log('Forecast result:', JSON.stringify(data));
 
-      this.forecast = data.forecast;
-      this.playability = data.playability;
-      this.cheaters_index = data.cheaters_index;
+      this.game_title = data.game_title;
+      this.forecast_title = data.forecast_title;
+      this.forecast_message = data.forecast_message;
+      this.playability_title = data.playability_title;
+      this.playability_value = data.playability_value;
+      this.cheaters_index_title = data.cheaters_index_title;
+      this.cheaters_index_value = data.cheaters_index_value;
 
       if (target !== null && typeof target !== 'undefined') target.complete();
     }).catch((error) => {
