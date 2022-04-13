@@ -9,7 +9,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "resources-android": "capacitor-resources -p android",
+    "resources-ios": "capacitor-resources -p ios",
+    "build-android": "ionic cap build android --no-open",
+    "build-ios": "ionic cap build ios --no-open"
   },
   "private": true,
   "dependencies": {
