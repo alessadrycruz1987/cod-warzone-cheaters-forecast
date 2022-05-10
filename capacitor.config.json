@@ -2,5 +2,11 @@
 	"appId": "com.cappitolian.codwarzonecheatersforecast",
 	"appName": "COD:W CF",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 3000,
+			"launchAutoHide": true
+		}
+	}
 }
