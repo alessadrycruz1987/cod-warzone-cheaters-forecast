@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { CodWarzoneCheatersForecastJsonService } from '../services/get/cod-warzone-cheaters-forecast-json.service';
+import { CodWarzoneCheatersForecastJsonService } from 'src/app/services/get/cod-warzone-cheaters-forecast-json.service';
+
 
 @Component({
   selector: 'app-home',
